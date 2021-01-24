@@ -1,0 +1,335 @@
+:root {
+    --HSDSGlobalFontFamily: "Aktiv Grotesk","Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --HSDSGlobalFontFamilyMono: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    --HSDSGlobalFontSize: 13px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #fdf5d3;
+    font-family: var(--HSDSGlobalFontFamily), var(--HSDSGlobalFontFamilyMono);
+    font-size: var(--HSDSGlobalFontSize);
+    overflow-x: hidden;
+}
+
+#navigation{
+    width: 20%;
+    border-color: black;
+    margin-left: 40px;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#navigation > li {
+    margin: 5px;
+    padding: 10px;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 19px;
+}
+
+#navigation > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+div#introduction{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: hidden;
+    max-width: 100vw;
+    padding-bottom: 20px;
+}
+
+#myHello {
+    font-size: 20px;
+    padding: 15px;
+    padding-left: 4rem;
+}
+
+#name{
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#cool-animation {
+    width: 90%;
+}
+
+#animbox {
+    max-width: 80%;
+    width: 550px;
+    height: 550px;
+    margin: auto;
+    margin-left: 10em;
+    margin-top: 5em;
+    border-radius: 40px;
+    background-color: black;
+}
+
+.color-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, rgba(207, 40, 207, 0.5) 5%,  rgba(219, 64, 64, 0.7) 90%);
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    transform: scale(1.8);
+}
+
+.color-circle2 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, rgba(207, 40, 207, 0.7) 5%,  rgba(219, 64, 64, 0.6) 90%);
+    position: absolute;
+    left: 10px;
+    top: 100px;
+}
+
+.color-circle3 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: linear-gradient(50deg, rgba(8, 7, 8, 0.6) 25%,  rgba(3, 168, 113, 0.6) 90%);
+    position: absolute;
+    left: 85%;
+    top: 100px;
+    transform: scale(2.5);
+    z-index: -1;
+}
+
+.color-circle4 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: linear-gradient(30deg, rgba(248, 211, 88, 0.7) 15%,  rgba(82, 32, 129, 0.6) 70%);
+    position: absolute;
+    right: 60px;
+    top: 90%;
+    transform: scale(5);
+    z-index: -1;
+}
+
+li>a{
+    position: relative;
+}
+
+li > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  li > a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  #anim-eye {
+      position: absolute;
+      top: 350px;
+      right: 580px;
+      animation: move 5s ease infinite;
+  }
+
+  #anim-iris {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      transform: scaleX(1.5);
+  }
+
+  #anim-blackball {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      background-color: black;
+      border-radius: 50%;
+      top: 50px;
+      right: 50px;
+      transform: scaleX(0.7);
+      animation: rapid-move 10s ease-out infinite;
+  }
+
+  #eyelash-1 {
+      height: 65px;
+      width: 20px;
+      position: absolute;
+      background-color: white;
+      border-radius: 10px;
+      top: -70px;
+      left: -20px;
+      transform: rotateZ(-30deg);
+  }
+
+  #eyelash-2 {
+    height: 65px;
+    width: 20px;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    top: -90px;
+    left: 85px;
+}
+
+#eyelash-3 {
+    height: 65px;
+    width: 20px;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    top: -70px;
+    right: -210px;
+    transform: rotateZ(30deg);
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.project-title {
+    padding: 20px;
+    margin: 5px;
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#projects a {
+    text-decoration: none;
+    color: black;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    min-width: 60%;
+    max-width: 80%;
+    border-radius: 30px;
+    margin: 50px;
+    background-image: linear-gradient(160deg, rgba(255, 218, 115, 0.5) 40%, rgba(239, 115, 255, 0.4) 90%);
+    transition: all 0.2s ease;
+}
+
+.project:hover {
+    box-shadow: rgba(90, 88, 88, 0.753) 1px 7px 8px 0px;
+    transition: all 0.3s ease;
+    transform: scale(1.02);
+}
+
+img {
+    width: 32vw;
+    height: auto;
+    align-self: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+li > a:active {
+    transition: all 0.3s ease;
+}
+
+@keyframes move {
+    0% {
+        top: 320px;
+    }
+
+    50% {
+        top: 380px;
+    }
+
+    100% {
+        top: 320px;
+    }
+}
+
+@keyframes rapid-move {
+    0% {
+        top: 50px;
+        right: 50px;
+    }
+
+    9% {
+        top: 50px;
+        right: 50px;
+    }
+
+    10% {
+        top: 80px;
+        right: 80px;
+    }
+
+
+    25% {
+        top: 80px;
+        right: 80px;
+    }
+
+    26% {
+        top: 95px;
+        right: 70px;
+    }
+
+
+    32% {
+        top: 95px;
+        right: 70px;
+    }
+
+    33% {
+        top: 20px;
+        right: 30px;
+    }
+
+    45% {
+        top: 20px;
+        right: 30px;
+    }
+
+    48% {
+        top: 35px;
+        right: 42px;
+    }
+
+    50% {
+        top: 50px;
+        right: 50px;
+    }
+
+    100% {
+        top: 50px;
+        right: 50px;
+    }
+}
+
+
